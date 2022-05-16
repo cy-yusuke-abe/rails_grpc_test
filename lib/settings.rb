@@ -1,0 +1,4 @@
+
+
+class Settings < Settingslogic
+end

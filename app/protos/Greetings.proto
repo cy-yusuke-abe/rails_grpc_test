@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package rpc;
+
+service Greetings {
+  rpc Users(Void) returns (UserResp) {};
+  rpc Greeting(GreetReq) returns (GreetResp) {}
+}
+
+message Void {
+}
+
+message User {
+  uint32 id = 1;
+  string nickname = 2;
+}
+
+message UserResp {
+  repeated User users = 1;
+}
+
+message GreetReq {
+  uint32 id = 1;
+  string message = 2;
+}
+
+message GreetResp {
+  uint32 id = 1;
+  string message = 2;
+}
+
+
+
